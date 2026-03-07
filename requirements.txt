@@ -1,9 +1,4 @@
 autogluon
 dash
 jupyter
-notebook
 plotly
-pandas
-numpy
-scikit-learn
-scipy
