@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 # ─── โหลดข้อมูล ───────────────────────────────────────────────────────────────
-df = pd.read_csv("data/predictions.csv")
+df = pd.read_csv("data/predict/predictions.csv")
 
 SIZE_LABEL = {1: "เล็ก (<60 ห้อง)", 2: "กลาง (60-149 ห้อง)", 3: "ใหญ่ (≥150 ห้อง)"}
 REGION_TH = {
