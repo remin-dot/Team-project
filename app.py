@@ -62,7 +62,7 @@ app.layout = html.Div(
                     },
                 ),
                 html.P(
-                    "รายได้โรงแรมจำแนกตามภูมิภาคและขนาด · ข้อมูล สสช. + Chronos2 Forecast",
+                    "รายได้โรงแรมจำแนกตามภูมิภาคและขนาด · ข้อมูล สสช.",
                     style={"color": COLORS["muted"], "margin": 0, "fontSize": "16px"},
                 ),
             ],
