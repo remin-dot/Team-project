@@ -6,7 +6,11 @@ import pandas as pd
 # ─── โหลดข้อมูล ───────────────────────────────────────────────────────────────
 df = pd.read_csv("data/predict/predictions.csv")
 
-SIZE_LABEL = {1: "เล็ก (<60 ห้อง)", 2: "กลาง (60-149 ห้อง)", 3: "ใหญ่ (≥150 ห้อง)"}
+SIZE_LABEL = {
+    1: "เล็ก (น้อยกว่า 60 ห้อง)",
+    2: "กลาง (60 ถึง 149 ห้อง)",
+    3: "ใหญ่ (150 ห้องขึ้นไป)",
+}
 REGION_TH = {
     "Bangkok": "กรุงเทพมหานคร",
     "Central": "ภาคกลาง",
@@ -22,9 +26,9 @@ COLORS = {
     "forecast": "#FFB74D",
     "band": "rgba(255,183,77,0.15)",
     "bg": "#0D1117",
-    "card": "#161B22",
+    "card": "#202B3A",
     "border": "#30363D",
-    "text": "#E6EDF3",
+    "text": "#FFFFFF",
     "muted": "#8B949E",
 }
 
@@ -59,7 +63,7 @@ app.layout = html.Div(
                 ),
                 html.P(
                     "รายได้โรงแรมจำแนกตามภูมิภาคและขนาด · ข้อมูล สสช. + Chronos2 Forecast",
-                    style={"color": COLORS["muted"], "margin": 0, "fontSize": "14px"},
+                    style={"color": COLORS["muted"], "margin": 0, "fontSize": "16px"},
                 ),
             ],
         ),
@@ -77,8 +81,8 @@ app.layout = html.Div(
                         html.Label(
                             "ภูมิภาค",
                             style={
-                                "fontSize": "12px",
-                                "color": COLORS["muted"],
+                                "fontSize": "18px",
+                                "color": COLORS["text"],
                                 "marginBottom": "8px",
                                 "display": "block",
                                 "letterSpacing": "1px",
@@ -92,12 +96,15 @@ app.layout = html.Div(
                             ],
                             value=REGIONS,
                             inline=True,
-                            style={"color": COLORS["text"], "fontSize": "13px"},
+                            style={"fontSize": "16px"},
                             inputStyle={
                                 "marginRight": "4px",
                                 "accentColor": COLORS["forecast"],
                             },
-                            labelStyle={"marginRight": "16px"},
+                            labelStyle={
+                                "marginRight": "16px",
+                                "color": COLORS["muted"],
+                            },
                         ),
                     ],
                     style={
@@ -112,8 +119,8 @@ app.layout = html.Div(
                         html.Label(
                             "ขนาดโรงแรม",
                             style={
-                                "fontSize": "12px",
-                                "color": COLORS["muted"],
+                                "fontSize": "18px",
+                                "color": COLORS["text"],
                                 "marginBottom": "8px",
                                 "display": "block",
                                 "letterSpacing": "1px",
@@ -127,12 +134,15 @@ app.layout = html.Div(
                             ],
                             value=SIZES,
                             inline=True,
-                            style={"color": COLORS["text"], "fontSize": "13px"},
+                            style={"fontSize": "16px"},
                             inputStyle={
                                 "marginRight": "4px",
                                 "accentColor": COLORS["actual"],
                             },
-                            labelStyle={"marginRight": "16px"},
+                            labelStyle={
+                                "marginRight": "16px",
+                                "color": COLORS["muted"],
+                            },
                         ),
                     ],
                     style={
