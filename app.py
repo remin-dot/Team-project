@@ -120,7 +120,6 @@ app.layout = html.Div(
                 ),
             ],
         ),
-        # 🌟 โมดูลเสริม (5 คะแนน): What-If Simulator
         html.Div(
             style={
                 "backgroundColor": COLORS["card"],
