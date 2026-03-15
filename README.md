@@ -12,27 +12,27 @@
 - **ทำอะไร:** เป็นเว็บแอป Dash ที่แสดงกราฟรายได้จริงและพยากรณ์พร้อมตัวเลือกในการพยากรณ์
 - **ใช้อย่างไร:** รัน `python app.py` แล้วเปิด `http://127.0.0.1:8050`
 
-###  `data/raw/datas.csv`
+###  `datas.csv`
 - **ทำอะไร:** ข้อมูลดิบที่รวบรวมจากแหล่งข้อมูลต้นทาง
 - **ใช้อย่างไร:** ใช้เป็น input ในขั้นตอนการทำความสะอาดข้อมูล 
 
-###  `data/processed/datas_cleaned.csv`
+###  `datas_cleaned.csv`
 - **ทำอะไร:** ข้อมูลที่ผ่านการทำความสะอาดและเตรียมสำหรับโมเดล
 - **ใช้อย่างไร:** ใช้เป็น input ให้โน้ตบุ๊กหรือสคริปต์ฝึกโมเดล
 
-###  `data/predict/predictions.csv`
+###  `predictions.csv`
 - **ทำอะไร:** ผลลัพธ์การพยากรณ์ที่ถูกนำมาใช้ในแดชบอร์ด
 - **ใช้อย่างไร:** `app.py` จะโหลดไฟล์นี้เพื่อแสดงกราฟพยากรณ์
 
-###  `notebooks/cleaning.ipynb`
+###  `cleaning.ipynb`
 - **ทำอะไร:** กระบวนการเตรียมข้อมูลและการเตรียม dataset สำหรับโมเดล
 - **ใช้อย่างไร:** รันใน Jupyter Notebook เพื่อทำความสะอาดและบันทึกลง `datas_cleaned.csv`
 
-###  `notebooks/modeling_timeseries_present_prediction.ipynb`
+###  `modeling_timeseries_present_prediction.ipynb`
 - **ทำอะไร:** สร้างโมเดลพยากรณ์สำหรับช่วงปัจจุบันใน dataset พร้อมการประเมินความแม่นยำ
 - **ใช้อย่างไร:** รันโน้ตบุ๊กเพื่อตรวจสอบโมเดล, วิเคราะห์ความแม่นยำ, และปรับพารามิเตอร์
 
-###  `notebooks/modeling_timeseries_future_prediction.ipynb`
+###  `modeling_timeseries_future_prediction.ipynb`
 - **ทำอะไร:** สร้างโมเดลพยากรณ์อนาคตและบันทึก predictions.csv
 - **ใช้อย่างไร:** รันเพื่อเทรนโมเดลและสร้างผลลัพธ์สำหรับแดชบอร์ด
 
