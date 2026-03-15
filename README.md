@@ -6,6 +6,44 @@
 
 ---
 
+## โครงสร้างโปรเจกต์
+
+```
+
+Team-project/
+
+├── app.py
+
+├── README.md
+
+├── requirements.txt
+
+├── data/
+
+│   ├── predict/
+
+│   │   └── predictions.csv
+
+│   ├── processed/
+
+│   │   └── datas_cleaned.csv
+
+│   └── raw/
+
+│       └── datas.csv
+
+└── notebooks/
+
+    ├── cleaning.ipynb
+
+    ├── modeling_timeseries_future_prediction.ipynb
+
+    └── modeling_timeseries_present_prediction.ipynb
+
+```
+
+---
+
 ##  โครงสร้างไฟล์
 
 `app.py`
