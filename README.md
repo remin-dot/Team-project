@@ -29,6 +29,8 @@
 ###  `modeling_timeseries_future_prediction.ipynb`
 - **ทำอะไร:** สร้างโมเดลพยากรณ์อนาคตและบันทึก predictions.csv
 
+---
+
 ####  เปรียบเทียบสองโมเดล (Present vs Future)
 - **โมเดล Present:** มุ่งเน้นที่การวัดความแม่นยำบนข้อมูลปัจจุบัน 
 - **โมเดล Future:** มุ่งเน้นที่การ generate forecast สำหรับช่วงเวลาข้างหน้า 
@@ -71,3 +73,6 @@ http://127.0.0.1:8050
 
 ---
 
+## ที่มาของข้อมูล
+
+https://data.go.th/dataset/os_17_0007_01
