@@ -11,34 +11,20 @@
 ```
 
 Team-project/
-
-├── app.py
-
-├── README.md
-
-├── requirements.txt
-
 ├── data/
-
 │   ├── predict/
-
 │   │   └── predictions.csv
-
 │   ├── processed/
-
 │   │   └── datas_cleaned.csv
-
 │   └── raw/
-
 │       └── datas.csv
-
-└── notebooks/
-
-    ├── cleaning.ipynb
-
-    ├── modeling_timeseries_future_prediction.ipynb
-
-    └── modeling_timeseries_present_prediction.ipynb
+├── notebooks/
+│     ├── cleaning.ipynb
+│     ├── modeling_timeseries_future_prediction.ipynb
+│     └── modeling_timeseries_present_prediction.ipynb
+├── app.py
+├── README.md
+└── requirements.txt
 
 ```
 
@@ -97,20 +83,27 @@ pip install autogluon
 pip install dash
 ```
 
-3. รันโมเดลทั้งสองก่อนรันแอป
+3. install jupyterlab
 
 ```
+pip install jupyterlab
+```
+
+4. รัน jupyter ก่อนรัน app
+
+```
+cleaning.ipynb
 modeling_timeseries_present_prediction.ipynb
 modeling_timeseries_future_prediction.ipynb
 ```
 
-4. รันแอป:
+5. รันแอป:
 
 ```bash
 python app.py
 ```
 
-5. เปิดเบราว์เซอร์ไปที่:
+6. เปิดเบราว์เซอร์ไปที่:
 
 ```
 http://127.0.0.1:8050
