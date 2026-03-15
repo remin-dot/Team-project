@@ -31,13 +31,6 @@
 
 ---
 
-##  เปรียบเทียบสองโมเดล (Present vs Future)
-- **โมเดล Present:** มุ่งเน้นที่การวัดความแม่นยำบนข้อมูลปัจจุบัน 
-- **โมเดล Future:** มุ่งเน้นที่การ generate forecast สำหรับช่วงเวลาข้างหน้า 
-- **ใช้งานจริง:** ให้ใช้ `present` เพื่อประเมินคุณภาพโมเดลก่อนแล้วใช้ `future` เพื่อสร้างไฟล์ `predictions.csv` 
-
----
-
 ## วิธีการใช้หน้า dashboard
 1. เลือกภูมิภาค
 2. เลือกขนาดหอพัก
@@ -66,13 +59,20 @@ pip install autogluon
 pip install dash
 ```
 
-3. รันแอป:
+3. รันโมเดลทั้งสองก่อนรันแอป
+
+```
+modeling_timeseries_present_prediction.ipynb
+modeling_timeseries_future_prediction.ipynb
+```
+
+4. รันแอป:
 
 ```bash
 python app.py
 ```
 
-4. เปิดเบราว์เซอร์ไปที่:
+5. เปิดเบราว์เซอร์ไปที่:
 
 ```
 http://127.0.0.1:8050
