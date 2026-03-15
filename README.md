@@ -8,37 +8,44 @@
 
 ##  โครงสร้างไฟล์
 
-###  `app.py`
+`app.py`
 -  เป็นเว็บแอป Dash ที่แสดงกราฟรายได้จริงและพยากรณ์พร้อมตัวเลือกในการพยากรณ์
 
-###  `datas.csv`
+`datas.csv`
 -  ข้อมูลดิบที่รวบรวมจากแหล่งข้อมูลต้นทาง
 
-###  `datas_cleaned.csv`
+`datas_cleaned.csv`
 -  ข้อมูลที่ผ่านการทำความสะอาดและเตรียมสำหรับโมเดล
 
-###  `predictions.csv`
+`predictions.csv`
 -  ผลลัพธ์การพยากรณ์ที่ถูกนำมาใช้ในแดชบอร์ด
 
-###  `cleaning.ipynb`
+`cleaning.ipynb`
 -  กระบวนการเตรียมข้อมูลและการเตรียม dataset สำหรับโมเดล
 
-###  `modeling_timeseries_present_prediction.ipynb`
+`modeling_timeseries_present_prediction.ipynb`
 -  สร้างโมเดลพยากรณ์สำหรับช่วงปัจจุบันใน dataset พร้อมการประเมินความแม่นยำ
 
-###  `modeling_timeseries_future_prediction.ipynb`
+`modeling_timeseries_future_prediction.ipynb`
 -  สร้างโมเดลพยากรณ์อนาคตและบันทึก predictions.csv
 
 ---
 
-####  เปรียบเทียบสองโมเดล (Present vs Future)
+##  เปรียบเทียบสองโมเดล (Present vs Future)
 - **โมเดล Present:** มุ่งเน้นที่การวัดความแม่นยำบนข้อมูลปัจจุบัน 
 - **โมเดล Future:** มุ่งเน้นที่การ generate forecast สำหรับช่วงเวลาข้างหน้า 
-- **ใช้งานจริง:** ให้ใช้ `present` เพื่อประเมินคุณภาพโมเดลก่อนแล้วใช้ `future` เพื่อสร้างไฟล์ `predictions.csv` ที่จะถูกโหลดโดย `app.py`
+- **ใช้งานจริง:** ให้ใช้ `present` เพื่อประเมินคุณภาพโมเดลก่อนแล้วใช้ `future` เพื่อสร้างไฟล์ `predictions.csv` 
 
 ---
 
-### ไลบรารีหลักที่ใช้
+## วิธีการใช้หน้า dashboard
+1. เลือกภูมิภาค
+2. เลือกขนาดหอพัก
+3. เลือกการเพิ่มขึ้นหรือลดลงของนักท่องเทียว
+
+---
+
+## ไลบรารีหลักที่ใช้
 - `autogluon` – สำหรับสร้างโมเดล Machine Learning
 - `dash` – สร้างเว็บแดชบอร์ด
 - `plotly` – วาดกราฟ
