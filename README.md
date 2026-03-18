@@ -71,22 +71,23 @@ Team-project/
 ---
 
 ##  เริ่มใช้งาน (Run)
-1. Install AutoGluon
+
+1. สร้าง Virtual Environment
 
 ```
-pip install autogluon
+python venv venv
 ```
 
-2. install dash
+2. Activate Virtual Environment
 
 ```
-pip install dash
+venv/Scripts/activate
 ```
 
-3. install jupyterlab
+3. Install Package
 
 ```
-pip install jupyterlab
+pip install -r requirements.txt
 ```
 
 4. รัน jupyter ก่อนรัน app
